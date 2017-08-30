@@ -1,13 +1,16 @@
 package com.darron.arithmetic;
 
+
+import java.math.BigDecimal;
+
 /**
  * 计算50000！的各个位数之和
  */
 public class FactorialSum {
 
     public static void main(String[] args) {
-
-        System.out.println(factorialArithmetic());
+        BigDecimal num = new BigDecimal(5000);
+        System.out.println(factorial(num));
     }
 
 
@@ -51,6 +54,23 @@ public class FactorialSum {
         return num;
     }
 
+    /**
+     * 使用递归方法计算n的阶乘
+     *
+     * @param n
+     * @return
+     */
+    private static BigDecimal factorial(BigDecimal n) {
+        BigDecimal one = new BigDecimal(1);
+        if (n.intValue() == 0) {
+            System.out.println(n + "! = " + 1);
+            return one;
+        } else {
+            BigDecimal num = n.multiply(factorial(n.subtract(one)));
+            System.out.println(n + "! = " + num);
+            return num;
+        }
+    }
 
 }
 
