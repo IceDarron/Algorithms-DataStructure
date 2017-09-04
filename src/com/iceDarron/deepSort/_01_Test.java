@@ -1,7 +1,7 @@
 package com.iceDarron.deepSort;
 
-import com.iceDarron.deepSort.AscOrDesc;
-import com.iceDarron.deepSort.SelectionSort;
+import com.iceDarron.deepSort.impl.AscOrDesc;
+import com.iceDarron.deepSort.impl.InsertionSort;
 
 public class _01_Test {
 
@@ -15,13 +15,16 @@ public class _01_Test {
         int[] num = {12, 25, 12, 3, 99, 56, 1, 45, 23, 23};
 
         //冒泡排序
-//		new AscOrDesc(new BubbleSort().bubbleSort(num));
+//        BubbleSort.bubbleSort(num);
 
         //选择排序
-        new AscOrDesc((new SelectionSort().selectionSort(num)));
+//        SelectionSort.selectionSort(num);
 
         //插入排序
-//		new AscOrDesc().AscOrDesc(new InsertionSort().InsertionSort(num));
+        InsertionSort.InsertionSort(num);
+
+        // 输出结果
+        AscOrDesc.AscOrDesc(num);
 
 
     }
