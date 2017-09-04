@@ -1,6 +1,6 @@
-package com.darron.arithmetic;
+package com.iceDarron.pointsGameOf24;
 
-import com.darron.io.WriteFile;
+import com.iceDarron.utils.IOUtils;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -30,7 +30,7 @@ public class PointsGameOf24 {
      * 基本完成了24点游戏，开始测试bug和优化代码。
      * bug5*5-5/4=24 已修正
      */
-    WriteFile wf = new WriteFile();
+    IOUtils wf = new IOUtils();
     String url = "H:/Myeclipse/workspace/TestUtil/src/com/darron/arithmetic/TestPointsGameOf24.txt";
 
     // 遍历所有无括号情况
