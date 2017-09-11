@@ -42,5 +42,4 @@ public class FastSort extends AbstraDeepSort {
 		num[low]=key;//此时low=high 是基准元素的位置，也是空出来的那个位置
 		return low;
 	}
-
 }
