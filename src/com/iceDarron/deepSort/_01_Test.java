@@ -25,7 +25,10 @@ public class _01_Test {
 //        iDeepSort = new InsertionSort();
 
         // 希尔排序
-        iDeepSort = new ShellSort();
+//        iDeepSort = new ShellSort();
+
+        // 快速排序
+        iDeepSort = new FastSort();
 
         // 排序
         iDeepSort.sort(num);
