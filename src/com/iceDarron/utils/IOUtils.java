@@ -83,12 +83,12 @@ public class IOUtils {
     }
 
     public static void main(String[] args) {
-        byte[] bytes = image2byte("H:\\Jetbrains\\Idea\\Workspace\\Algorithms\\src\\com\\iceDarron\\resource\\image\\ChMkJ1bxATiIVlzmAAlJIHaXmLkAAOTUgN32YEACUk4716.jpg");
+        byte[] bytes = image2byte("H:\\Jetbrains\\Idea\\Workspace\\Algorithms\\resource\\image\\ChMkJ1bxATiIVlzmAAlJIHaXmLkAAOTUgN32YEACUk4716.jpg");
         System.out.println(bytes.length);
 //        for (int i = 0; i < bytes.length ; i++) {
 //            System.out.print(bytes[i]);
 //        }
 
-        byte2image(bytes, "H:\\Jetbrains\\Idea\\Workspace\\Algorithms\\src\\com\\iceDarron\\resource\\image\\Copy_ChMkJ1bxATiIVlzmAAlJIHaXmLkAAOTUgN32YEACUk4716.jpg");
+        byte2image(bytes, "H:\\Jetbrains\\Idea\\Workspace\\Algorithms\\resource\\image\\Copy_ChMkJ1bxATiIVlzmAAlJIHaXmLkAAOTUgN32YEACUk4716.jpg");
     }
 }
