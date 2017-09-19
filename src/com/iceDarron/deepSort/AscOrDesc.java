@@ -1,4 +1,4 @@
-package com.iceDarron.deepSort.impl;
+package com.iceDarron.deepSort;
 
 public class AscOrDesc {
 
