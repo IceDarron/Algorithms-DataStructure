@@ -29,17 +29,17 @@ public class CountingSort extends AbstraDeepSort {
         int min = Integer.MAX_VALUE;
 
         //找出数组中的最大最小值
-        for (int i = 0; i < num.length; i++) {
-            max = Math.max(max, num[i]);
-            min = Math.min(min, num[i]);
+        for (int aNum : num) {
+            max = Math.max(max, aNum);
+            min = Math.min(min, aNum);
         }
 
         // 保证能存放待排序数组中的所有元素，按值存放不是按个数存放
         int[] auxiliary = new int[max - min + 1];
 
         // 找出每个数字出现的次数
-        for (int i = 0; i < num.length; i++) {
-            int position = num[i] - min;
+        for (int aNum : num) {
+            int position = aNum - min;
             auxiliary[position]++;
         }
 
