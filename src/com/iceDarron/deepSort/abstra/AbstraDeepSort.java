@@ -12,27 +12,52 @@ public abstract class AbstraDeepSort implements IDeepSort {
     public void sort(String[] array) {
         int length = array.length;
         int[] intArray = new int[length];
+
+        // 排序
         for (int i = 0; i < length; i++) {
             intArray[i] = Integer.parseInt(array[i]);
         }
         sort(intArray);
+
+        // 返回
+        for (int i = 0; i < length; i++) {
+            array[i] = intArray[i] + "";
+        }
     }
 
-    public void sort(List<?> array) {
+    public void sort(List<Integer> array) {
         int size = array.size();
         int[] intArray = new int[size];
+
+        // 排序
         for (int i = 0; i < size; i++) {
-            intArray[i] = Integer.parseInt((String) array.get(i));
+            intArray[i] = array.get(i);
         }
         sort(intArray);
+
+        // 返回
+        for (int i = 0; i < size; i++) {
+            array.set(i,intArray[i]);
+        }
     }
 
     public void sort(Integer[] array) {
         int length = array.length;
         int[] intArray = new int[length];
+
+        // 排序
         for (int i = 0; i < length; i++) {
             intArray[i] = array[i];
         }
         sort(intArray);
+
+        // 返回
+        for (int i = 0; i < length; i++) {
+            array[i] = intArray[i];
+        }
+    }
+
+    public String getSortName() {
+        return this.getClass().getName();
     }
 }
