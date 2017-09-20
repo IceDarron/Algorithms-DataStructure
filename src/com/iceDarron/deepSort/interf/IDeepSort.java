@@ -12,5 +12,12 @@ public interface IDeepSort {
 
     public void sort(String[] strArray);
 
-    public void sort(List<?> listArray);
+    public void sort(List<Integer> listArray);
+
+    public void sort(Integer[] array);
+
+    /**
+     * 辅助方法
+     */
+    public String getSortName();
 }
