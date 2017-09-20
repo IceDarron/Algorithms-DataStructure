@@ -22,7 +22,6 @@ public class InsertionSort extends AbstraDeepSort {
      */
     @Override
     public void sort(int[] num) {
-        System.out.println("插入排序");
         for (int i = 1; i < num.length; i++) {
             int temp = num[i];
             int j = i - 1;
