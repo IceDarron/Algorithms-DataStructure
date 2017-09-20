@@ -37,22 +37,20 @@ public class BucketSort extends AbstraDeepSort {
             min = Math.min(min, aNum);
         }
 
-        // 确定桶容量，桶数，待排序数组长度
+        // 确定桶容量，桶数
         int bucketCapacity = 10;
         int bucketNum = (max - min) / bucketCapacity + 1; // 桶数
-        int length = num.length;
 
         // 创建链表（桶）集合并初始化，集合中的链表用于存放相应的元素
         List<List<Integer>> buckets = new LinkedList<List<Integer>>();
         for (int i = 0; i < bucketNum; i++) {
-            List<Integer> bucket = new LinkedList<Integer>();
-            buckets.add(bucket);
+            buckets.add(new LinkedList<Integer>());
         }
 
         // 把元素放进相应的桶中
-        for (int i = 0; i < length; i++) {
-            int index = (num[i] - min) / bucketCapacity;
-            buckets.get(index).add(num[i]);
+        for (int aNum : num) {
+            int index = (aNum - min) / bucketCapacity;
+            buckets.get(index).add(aNum);
         }
 
         // 对每个桶中的元素排序，并放进a中
