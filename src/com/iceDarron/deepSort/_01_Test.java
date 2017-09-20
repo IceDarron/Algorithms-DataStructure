@@ -25,16 +25,24 @@ public class _01_Test {
 //        iDeepSort = new InsertionSort();
 
         // 希尔排序
-        iDeepSort = new ShellSort();
+//        iDeepSort = new ShellSort();
 
         // 快速排序
 //        iDeepSort = new FastSort();
 
+        // 计数排序
+//        iDeepSort = new CountingSort();
+
+        iDeepSort = new BucketSort();
+
         // 排序
         iDeepSort.sort(num);
 
+
+
         // 输出结果
         AscOrDesc.AscOrDesc(num);
+        System.out.println("排序方式：" + iDeepSort.getSortName());
 
 
     }
