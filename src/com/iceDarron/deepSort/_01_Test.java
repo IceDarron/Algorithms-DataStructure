@@ -33,7 +33,11 @@ public class _01_Test {
         // 计数排序
 //        iDeepSort = new CountingSort();
 
-        iDeepSort = new BucketSort();
+        // 桶排序
+//        iDeepSort = new BucketSort();
+
+        // 堆排序
+        iDeepSort = new HeapSort();
 
         // 排序
         iDeepSort.sort(num);
