@@ -12,7 +12,7 @@ public class _01_Test {
     public static void main(String[] args) {
 
         // 初始化数据
-        int[] num = {12, 25, 12, 3, 99, 56, 1, 45, 23, 23};
+        int[] num = {12, 25, 12, 3, 99, 561, 1, 45, 231, 2112};
         IDeepSort iDeepSort = null;
 
         // 冒泡排序
@@ -37,7 +37,10 @@ public class _01_Test {
 //        iDeepSort = new BucketSort();
 
         // 堆排序
-        iDeepSort = new HeapSort();
+//        iDeepSort = new HeapSort();
+
+        // 基数排序
+        iDeepSort = new RadixSort();
 
         // 排序
         iDeepSort.sort(num);
