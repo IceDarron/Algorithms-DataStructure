@@ -40,7 +40,10 @@ public class _01_Test {
 //        iDeepSort = new HeapSort();
 
         // 基数排序
-        iDeepSort = new RadixSort();
+//        iDeepSort = new RadixSort();
+
+        //归并排序
+        iDeepSort = new MergeSort();
 
         // 排序
         iDeepSort.sort(num);
