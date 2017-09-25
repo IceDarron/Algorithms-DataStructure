@@ -4,6 +4,10 @@ import java.math.BigDecimal;
 
 /**
  * 计算50000！的各个位数之和
+ * 2017.09.25
+ * IceDarron
+ * 该问题的解决主要用到了大数乘法的原理，大数乘法与大数加法相类似，通过分而治之的思想将大数分块进行计算。
+ * 大数相加或相乘在java.math.BigDecimal包中以实现，依照这个思想在本工程下的com.iceDarron.bigCalculation中实现了大数相加。
  */
 public class FactorialSum {
 
