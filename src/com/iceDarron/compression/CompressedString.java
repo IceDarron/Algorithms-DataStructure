@@ -17,46 +17,46 @@ package com.iceDarron.compression;
  * 返回4，输入数组的前4个字符应该是：["a","b","1","2"]。
  */
 public class CompressedString {
-  public int compress(char[] chars) {
-          if (chars == null || chars.length == 0) return 0;
-          if (chars.length == 1) return 1;
-          int length = chars.length;
-          int newSet = 0;
-          int count = 1;
-          char temp = chars[0];
-          for (int i = 1; i < length; i++) {
-              if (temp == chars[i]) {
-                  count++;
-              } else {
-                  if (count > 1) {
-                      newSet += setNum(count, newSet, temp, chars) + 1;
-                  } else {
-                      chars[newSet] = temp;
-                      newSet++;
-                  }
-                  temp = chars[i];
-                  count = 1;
-              }
-          }
+    public int compress(char[] chars) {
+        if (chars == null || chars.length == 0) return 0;
+        if (chars.length == 1) return 1;
+        int length = chars.length;
+        int newSet = 0;
+        int count = 1;
+        char temp = chars[0];
+        for (int i = 1; i < length; i++) {
+            if (temp == chars[i]) {
+                count++;
+            } else {
+                if (count > 1) {
+                    newSet += setNum(count, newSet, temp, chars) + 1;
+                } else {
+                    chars[newSet] = temp;
+                    newSet++;
+                }
+                temp = chars[i];
+                count = 1;
+            }
+        }
 
-          if (count > 1) {
-              newSet += setNum(count, newSet, temp, chars);
-          } else {
-              chars[newSet] = temp;
-          }
+        if (count > 1) {
+            newSet += setNum(count, newSet, temp, chars);
+        } else {
+            chars[newSet] = temp;
+        }
 
-          return ++newSet;
-      }
+        return ++newSet;
+    }
 
-      private int setNum(int count, int set, char target, char[] chars) {
-          chars[set] = target;
-          int num = count;
-          int index = (num + "").length();
-          num = count;
-          for (int j = index - 1; j >= 0; j--) {
-              chars[set + 1 + j] = Integer.valueOf(num % 10).toString().charAt(0);
-              num /= 10;
-          }
-          return index;
-      }
+    private int setNum(int count, int set, char target, char[] chars) {
+        chars[set] = target;
+        int num = count;
+        int index = (num + "").length();
+        num = count;
+        for (int j = index - 1; j >= 0; j--) {
+            chars[set + 1 + j] = Integer.valueOf(num % 10).toString().charAt(0);
+            num /= 10;
+        }
+        return index;
+    }
 }
