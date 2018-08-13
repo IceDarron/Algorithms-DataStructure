@@ -17,7 +17,7 @@ package com.iceDarron.compression;
  * 返回4，输入数组的前4个字符应该是：["a","b","1","2"]。
  */
 public class CompressedString {
-    public int compress(char[] chars) {
+    public static int compress(char[] chars) {
         if (chars == null || chars.length == 0) return 0;
         if (chars.length == 1) return 1;
         int length = chars.length;
@@ -48,7 +48,7 @@ public class CompressedString {
         return ++newSet;
     }
 
-    private int setNum(int count, int set, char target, char[] chars) {
+    private static int setNum(int count, int set, char target, char[] chars) {
         chars[set] = target;
         int num = count;
         int index = (num + "").length();
@@ -58,5 +58,14 @@ public class CompressedString {
             num /= 10;
         }
         return index;
+    }
+
+    public static void main(String[] args) {
+        char[] chars = {'a','b','b','b','b','b','b','b','b','b','b','b','b'};
+        int length = compress(chars);
+        System.out.println(length);
+        for (int i = 0; i < length; i++) {
+            System.out.print(chars[i]);
+        }
     }
 }
