@@ -186,12 +186,12 @@ public class BiTree {
      * <p>
      * 分治思想，在左边和右边的子树那个深度大，那么就选那个深度大的+1 。出口为结点为空。
      */
-    public int deepth(BTNode node) {
+    public int depth(BTNode node) {
         if (node == null) {
             return 0;
         } else {
-            int left = deepth(node.getLeft());
-            int right = deepth(node.getRight());
+            int left = depth(node.getLeft());
+            int right = depth(node.getRight());
             if (left > right)
                 return left + 1;
             else
@@ -199,12 +199,11 @@ public class BiTree {
         }
     }
 
-
     /**
      * 计算二叉树的叶子数目
-     *
+     * <p>
      * 递归，和探索结点一样，左右探索（顺序无关），结点左右子树皆为空，才是叶子。
-     *
+     * <p>
      * 出口两个，结点为空返回0，结点的左右子树为空返回1。
      */
     public int leafCount(BTNode node) {
@@ -295,7 +294,7 @@ class TestBiTree {
 //        System.out.println(tree.countNodes(tree.root));
 
 //        System.out.println("Deepth:");
-//        System.out.println(tree.deepth(tree.root));
+//        System.out.println(tree.depth(tree.root));
 
         System.out.println("Leaf-Count:");
         System.out.println(tree.leafCount(tree.getRoot()));
